@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Listing Page</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+  <!-- Start Header -->
+  <header id="header" class="header">
+    <div class="container d-flex align-items-center">
+      <h1 class="logo me-auto"><a href="index.html">VENIA</a></h1>
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link active" href="index.html">Home</a> </li>
+          <li><a class="nav-link" href="women.html">Women</a> </li>
+          <li><a class="nav-link" href="men.html">Men</a></li>
+          <li><a class="nav-link" href="smart-gear.html">Smart Gear</a></li>
+          <li><a class="nav-link" href="accessories.htmll">Acessories</a></li>
+        </ul>
+        <div class="icon">
+          <a href="javascript:void(0);" onclick="toggleMenu()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </div>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+      <a href="/" target="_blank" class="cart-button text-white"><i class="fa fa-shopping-basket"></i></a>
+    </div>
+  </header>
+  <!-- End Header -->
+
+  <!-- Start Hero section -->
+  <div class="banner-container">
+    <div class="banner-text black-box">
+      <h1 class="page-subheading">Men's <br /> Outerwear</h1>
+    </div>
+    <div>
+      <div class="banner-image">
+        <img src="./images/banner.jpg" alt="">
+      </div>
+    </div>
+  </div>
+  <!-- end Hero section -->
+
+  <!-- start breadcrumb -->
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-4">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Clothing</a></li>
+            <li class="breadcrumb-item"><a href="#">Women's</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Outerwear</li>
+          </ol>
+        </nav>
+      </div>
+      <div class="col-8">
+        <div class="sorting">
+          <select id="sort">
+            <option value="price-asc">Price: Low to High</option>
+            <option value="price-desc">Price: High to Low</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end breadcrumb -->
+  <!-- start main section -->
+  <div class="container">
+    <div class="row">
+      <div class="col-3">
+        <h2>Filters</h2>
+        <div class="filter-section">
+          <label for="category">Category:</label> <br />
+          <select id="category">
+            <option value="all">All</option>
+            <option value="men's clothing">Men's Clothing</option>
+            <option value="women's clothing">Women's Clothing</option>
+            <option value="jewelery">Jewelery</option>
+            <option value="electronics">Electronics</option>
+          </select>
+          <p>Product Search</p>
+          <input type="text" id="search" placeholder="Search products...">
+          <p>Price Range:</p>
+          <input type="number" id="price-range-min" placeholder="Min price">
+          <input type="number" id="price-range-max" placeholder="Max price">
+        </div>
+      </div>
+      <div class="col-9">
+        <div id="product-list" class="product-list"></div>
+        <button id="load-more" class="load-more">Load More</button>
+      </div>
+    </div>
+  </div>
+  <!-- end main section -->
+
+  <!-- start Footer -->
+  <footer>
+    <div class="footer-top">
+      <div class="container">
+        <div class="row ">
+          <div class="col-3">
+            <h5>Account</h5>
+            <ul>
+              <li><a href="">Sign In</a> </li>
+              <li><a href="">Register</a> </li>
+              <li><a href="">Order Status</a> </li>
+            </ul>
+          </div>
+          <div class="col-3">
+            <h5>About</h5>
+            <ul>
+              <li><a href="">Our Story</a> </li>
+              <li><a href="">Careers</a> </li>
+            </ul>
+          </div>
+          <div class="col-3">
+            <h5>Help</h5>
+            <ul>
+              <li><a href="">Contact Us</a> </li>
+              <li><a href="">Order Status</a> </li>
+              <li><a href="">Returns</a> </li>
+            </ul>
+          </div>
+          <div class="col-3">
+            <h5>Follow Us!</h5>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur quisquam dicta quibusdam
+              repudiandaenonquo.</p>
+            <ul class="inline-list">
+              <li><a href=""><i class="fa fa-instagram"></i></a></li>
+              <li><a href=""><i class="fa fa-facebook"></i></a></li>
+              <li><a href=""><i class="fa fa-twitter"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="bottom-footer">
+        <div class="footer-logo">
+          <p>VENIA</p>
+        </div>
+        <div class="footer-copyright">
+          <p>© Company Name Address Ave, City Name State ZIP</p>
+        </div>
+        <div class="footer-link">
+          <ul>
+            <li><a href="">Terms of Use</a></li>
+            <li><a href="">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- end Footer -->
+
+  <script src="js/main.js"></script>
+
+  <!-- Start Mobile menu -->
+  <script>
+    function toggleMenu() {
+      var x = document.getElementById("navbar");
+      if (x.className === "navbar") {
+        x.className += " responsive";
+      } else {
+        x.className = "navbar";
+      }
+    }
+  </script>
+  <!-- End Mobile menu -->
+</body>
+
+</html>
